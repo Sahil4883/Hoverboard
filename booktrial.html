@@ -6,212 +6,144 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Hoverboard, the online Education platform">
-  <meta name="keywords" content="Hoverboard, Classroom, VLE,">
+  <meta name="keywords" content="Hoverboard, Classroom, VLE, Education, Learning, Homework, School, Teacher, Student, Virtual Learning Environment, Online Learning, Online Classroom, Online Education, Online Teacher, Online Student, Online Homework, Online School, Homework Plaform, Learning Platform, Homework Cloud, Complete classwork online"> 
   <link rel="stylesheet" href="assets/css/style.css">
-  <link href="https://fonts.cdnfonts.com/css/glacial-indifference-2" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/peace-sans" rel="stylesheet">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script src="https://kit.fontawesome.com/c7515a9d31.js" crossorigin="anonymous"></script>
-
   <link rel="icon" href="assets/media/favicon.ico" type="image/x-icon">
   <title>Hoverboard</title>
 </head>
 
 <body>
+  <div class="container-fixed-footer"><!---This div is used to fix the footer to the bottom of the page.-->
+    <div class="body-content-wrap-for-fixed-footer"><!---This div is used to fix the footer to the bottom of the page.-->
   <header>
+    <!-- The header contains a responsive Navbar that is displayed on all pages. The Navbar contains the logo, a menu icon and menu items. The menu icon is only displayed on mobile devices, it is used to open and close the menu items on mobile devices.  The menu items are displayed as a list on mobile devices and as a row on larger devices. -->
     <nav>
       <div class="navbar" id="mynavbar">
-        <a href="index.html"><img src="assets/media/navbarlogo.png" class="navbartitle" alt="Hoverboard Company Logo"></a>
-
-        <a href="javascript:void(0)" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars" id="icon-open"></i></a>
-
-        <a href="javascript:void(0)" class="icon" onclick="myFunction()">
-        <i class="fa-solid fa-x"  id="icon-close"></i></a>
-
+        <a href="index.html"><img src="assets/media/navbarlogo-smallest.png" class="navbartitle" alt="Hoverboard Company Logo"></a>
+        <a href="javascript:void(0)" class="icon" onclick="myFunction()" aria-label="open mobile menu">
+        <i class="fa fa-bars" id="icon-open"></i></a> <!--Menu-open icon only displayed on mobile devices -->
+        <a href="javascript:void(0)" class="icon" onclick="myFunction()" aria-label="close mobile menu"> 
+        <i class="fa-solid fa-x"  id="icon-close"></i></a> <!-- closes the menu-->
       <ul class="menu-items">
+      <li><a href="index.html">Home</a></li>
       <li><a href="features.html">About our Features</a></li>
-      <li><a href="booktrial.html" class="tab-active">Book Free Trial</a></li>
+      <li><a href="booktrial.html" class="tab-active">Sign up</a></li>
       </ul>
 
     </div>
     </nav>
-    <script> /*Script for Menu open */
-      function myFunction() {
-        document.getElementById("mynavbar").classList.toggle("menuOpen");
-        document.querySelector("main").classList.toggle("move-down");
-      }
-  </script>
+
   </header>
 <br><br><br><br>
 
-
-
-
-
-
-
-
-
 <main>
-    <section id="booktrial-landing">
+    <section id="booktrial-landing" class="display-grid">
       <div class="heading-container">
-        <h1>
+        </div>
+        <h1 class="text-white">
           Claim your Free Trial
         </h1>
-      </div>
-      <div class="img-container">
         <img src="assets/media/booktrial-clipboard-icon.png" alt="signup icon">
-      </div>
     </section>
 
-
-
-    
-
-
-
-
-
-
-
     <section id="booktrial-form">
-      <div class="booktrial-bg-img">
-        <img src="/assets/media/booktrial-bg-quiggles.png" alt="background squiggle image" style="display:none">
-    </div>
+        <img id="bg-squiggles-writing" src="assets/media/bg-squiggles-writing.png" alt="background squiggle image">
         <h2>
           Essential Details
         </h2>
-        <p class="error">
-            Please enter the following details correctly:
+        <p>
+            Fill in the form below and a member of our team will be in touch to set up your free trial.
         </p>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
         <form action="./thankyou.html" method="GET">     
           <div id="form-grid-container">
             <div id="fname">
-              <label for="fname">First name:<i class="fa-solid fa-square-xmark"></i></label><i class="fa-solid fa-square-check"></i><br>
-              <input type="text" id="fname" name="fname" required>
+              <label for="fname-input">First name:<i class="fa-solid fa-square-xmark"></i></label><i class="fa-solid fa-square-check"></i><br>
+              <input type="text" id="fname-input" name="fname" required>
             </div>
         
             <div id="lname">
-              <label for="lname">Last name:<i class="fa-solid fa-square-xmark"></i></label><i class="fa-solid fa-square-check"></i><br>
-              <input type="text" id="lname" name="lname" required>
+              <label for="lname-input">Last name:<i class="fa-solid fa-square-xmark"></i></label><i class="fa-solid fa-square-check"></i><br>
+              <input type="text" id="lname-input" name="lname" required>
             </div>
         
             <div id="school">
-              <label for="school">School:<i class="fa-solid fa-square-xmark"></i></label><i class="fa-solid fa-square-check"></i><br>
-              <input type="text" id="school" name="school" required>
+              <label for="school-input">School:<i class="fa-solid fa-square-xmark"></i></label><i class="fa-solid fa-square-check"></i><br>
+              <input type="text" id="school-input" name="school" required>
             </div>
         
             <div id="job-title">
-              <label for="job-title">Job Title:<i class="fa-solid fa-square-xmark"></i></label><i class="fa-solid fa-square-check"></i><br>
-              <input type="text" id="job-title" name="job-title" required>
+              <label for="job-title-input">Job Title:<i class="fa-solid fa-square-xmark"></i></label><i class="fa-solid fa-square-check"></i><br>
+              <input type="text" id="job-title-input" name="job-title" required>
             </div>
         
             <div id="email">
-              <label for="email">Email:<i class="fa-solid fa-square-xmark"></i></label><i class="fa-solid fa-square-check"></i><br>
-              <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" required title="Enter a valid email address">
+              <label for="email-input">Email:<i class="fa-solid fa-square-xmark"></i></label><i class="fa-solid fa-square-check"></i><br>
+              <input type="email" id="email-input" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" required title="Enter a valid email address">
             </div>
         
             <div id="mobile-number">
-              <label for="mobile-number">Mobile Number:<i class="fa-solid fa-square-xmark"></i></label><i class="fa-solid fa-square-check"></i><br>
-              <input type="tel" id="mobile-number" name="mobile-number" pattern="[0-9]{11}" required title="Enter a valid 11-digit mobile number">
+              <label for="mobile-number-input">Mobile Number:<i class="fa-solid fa-square-xmark"></i></label><i class="fa-solid fa-square-check"></i><br>
+              <input type="tel" id="mobile-number-input" name="mobile-number" pattern="[0-9]{11}" required title="Enter a valid 11-digit mobile number">
             </div>
-        
-            <div id="password">
-              <label for="password">Password:<i class="fa-solid fa-square-xmark"></i></label><i class="fa-solid fa-square-check"></i><br>
-              <input type="password" id="password" name="password" required>
-            </div>
-        
-            <div id="confirm-password">
-              <label for="confirm-password">Confirm Password:<i class="fa-solid fa-square-xmark"></i></label><i class="fa-solid fa-square-check"></i><br>
-              <input type="password" id="confirm-password" name="confirm-password" required><br>
-              <span id="password-match-error" class="error"></span>
-            </div>
+
           </div>
-        
-          <script>
-            // Script for password confirmation validation - must match password
-            const passwordInput = document.getElementById('password');
-            const confirmPasswordInput = document.getElementById('confirm-password');
-            const passwordMatchError = document.getElementById('password-match-error');
-        
-            function validatePassword() {
-              if (passwordInput.value !== confirmPasswordInput.value) {
-                passwordMatchError.textContent = "Passwords do not match.";
-              } else {
-                passwordMatchError.textContent = "";
-              }
-            }
-        
-            confirmPasswordInput.addEventListener('input', validatePassword);
-          </script>
-        
           <div class="submit">
             <button type="submit" value="Submit">SUBMIT</button>
           </div>
         </form>
       </section>
     </main>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-  <footer>
-
-    <div class="footer-small-print">
-      <p>
-      © 2023 Hoverboard
-      </p>
-    </div>
-    
-
-    <div class = "footer-links">
-
-      <div class = "footer-row1">
-        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://www.intagram.com/"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.twitter.com/">
-        <i class="fa-brands fa-twitter"></i></a>
-        <a href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
+  </div><!--This div is used to fix the footer to the bottom of the page.-->   
+    <footer>
+      <!-- The footer contains a copyright note and links to the company's social media pages. The links are displayed as 2 columns on smaller devices and as a single row on larger devices. -->
+      <div class="footer-small-print">
+        <p>
+          © 2023 Hoverboard
+        </p>
       </div>
-
-      <div class = "footer-row2">
-        <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
-        <a href="https://www.discord.com/"><i class="fa-brands fa-discord"></i></a>
-        <a href="https://www.slack.com/"><i class="fa-brands fa-slack"></i></a>
-        <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+      <div class="footer-links">
+        <div class="footer-row1">
+          <a href="https://www.facebook.com/"><img src="assets/media/icons/facebook.svg" alt="icon"></a>
+          <a href="https://www.instagram.com/"><img src="assets/media/icons/instagram.svg" alt="icon"></a>
+          <a href="https://www.github.com/"><img src="assets/media/icons/github.svg" alt="icon"></a>
+          <a href="https://www.tiktok.com/"><img src="assets/media/icons/tiktok.svg" alt="icon"></a>
+        </div>
+        <div class="footer-row2">
+          <a href="https://www.youtube.com/"><img src="assets/media/icons/youtube.svg" alt="icon"></a>
+          <a href="https://www.discord.com/"><img src="assets/media/icons/discord.svg" alt="icon"></a>
+          <a href="https://www.slack.com/"><img src="assets/media/icons/slack.svg" alt="icon"></a>
+          <a href="https://www.linkedin.com/"><img src="assets/media/icons/linkedin.svg" alt="icon"></a>
+        </div>
       </div>
-      
-    </div>  
-
-  </footer>
+    </footer>
+  
+  </div>
+  <script> /*Script for Menu open */
+    function myFunction() {
+      document.getElementById("mynavbar").classList.toggle("menuOpen");
+      document.querySelector("main").classList.toggle("move-down");
+    }
+  </script>
+  <!-- Not being used at the moment, in progress
+ <script>
+    // Script for password confirmation validation - must match password
+    const passwordInput = document.getElementById('password');
+    const confirmPasswordInput = document.getElementById('confirm-password');
+    const passwordMatchError = document.getElementById('password-match-error');
+  
+    function validatePassword() {
+      if (passwordInput.value !== confirmPasswordInput.value) {
+        passwordMatchError.textContent = "Passwords do not match.";
+      } else {
+        passwordMatchError.textContent = "";
+      }
+    }
+  
+    confirmPasswordInput.addEventListener('input', validatePassword);
+  </script> -->
 </body>
 

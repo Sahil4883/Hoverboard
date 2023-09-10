@@ -6,69 +6,53 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Hoverboard, the online Education platform">
-  <meta name="keywords" content="Hoverboard, Classroom, VLE,">
+  <meta name="keywords" content="Hoverboard, Classroom, VLE, Education, Learning, Homework, School, Teacher, Student, Virtual Learning Environment, Online Learning, Online Classroom, Online Education, Online Teacher, Online Student, Online Homework, Online School, Homework Plaform, Learning Platform, Homework Cloud, Complete classwork online"> 
   <link rel="stylesheet" href="assets/css/style.css">
-  <link href="https://fonts.cdnfonts.com/css/glacial-indifference-2" rel="stylesheet">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script src="https://kit.fontawesome.com/c7515a9d31.js" crossorigin="anonymous"></script>
-
   <link rel="icon" href="assets/media/favicon.ico" type="image/x-icon">
   <title>Hoverboard</title>
 </head>
 
 <body id="home-page">
-  <header>
+<!---The home page contains a hero image & slogan, a mission statement, a call to action for features, testimonials, a call to action for sign up, and a footer.-->
+<div class="container-fixed-footer"><!---This div is used to fix the footer to the bottom of the page.-->
+  <div class="body-content-wrap-for-fixed-footer"><!---This div is used to fix the footer to the bottom of the page.-->  <header>
     <nav>
       <div class="navbar" id="mynavbar">
-        <a href="index.html"><img src="assets/media/navbarlogo.png" class="navbartitle" alt="Hoverboard Company Logo"></a>
-
-        <a href="javascript:void(0)" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars" id="icon-open"></i></a>
-
-        <a href="javascript:void(0)" class="icon" onclick="myFunction()">
-        <i class="fa-solid fa-x"  id="icon-close"></i></a>
-
+        <a href="index.html"><img src="assets/media/navbarlogo-smallest.png" class="navbartitle" alt="Hoverboard Company Logo"></a>
+        <a href="javascript:void(0)" class="icon" onclick="myFunction()" aria-label="open mobile menu">
+        <i class="fa fa-bars" id="icon-open"></i></a> <!--Menu-open icon only displayed on mobile devices -->
+        <a href="javascript:void(0)" class="icon" onclick="myFunction()" aria-label="close mobile menu"> 
+        <i class="fa-solid fa-x"  id="icon-close"></i></a> <!-- closes the menu-->
       <ul class="menu-items">
+      <li><a href="index.html" class="tab-active">Home</a></li>
       <li><a href="features.html">About our Features</a></li>
-      <li><a href="booktrial.html" class="tab-active">Book Free Trial</a></li>
+      <li><a href="booktrial.html">Sign up</a></li>
       </ul>
 
     </div>
     </nav>
-    <script> /*Script for Menu open */
-      function myFunction() {
-        document.getElementById("mynavbar").classList.toggle("menuOpen");
-        document.querySelector("main").classList.toggle("move-down");
-      }
-  </script>
+
   </header>
   <br>
 
-
-
-
-
-
-
-
-
-
-
-
-
 <main>
 <section id="hero-feature">
-
+  <!-- The hero-feature contains a heading and a hero image. The image is displayed as a portrait column on smaller devices and as a row on larger devices. -->
   <div class="hero-feature-container">
 
-    <div class="hero-image-container">
+    <div class="hero-image-container mobile hide-in-tablet-laptop-and-desktop">
       <img src="assets/media/hero-image.jpg" alt="hero image, student on computer">
     </div>
 
-  <div class="hero-image-desktop-container">
+  <div class="hero-image-container tablet laptop hide-in-mobile hide-in-desktop">
     <img src="assets/media/hero-image-desktop.jpg" alt="hero image desktop version, student on computer">
+  </div>
+
+  <div class="hero-image-container desktop hide-in-mobile-and-tablet-and-laptop show-in-desktop">
+    <img src="assets/media/hero-image-desktop-wide.png" class="hide-in-mobile-and-tablet-and-laptop show-in-desktop" alt="hero image desktop version, student on computer">
   </div>
 
   <div class="hero-heading">
@@ -77,49 +61,50 @@
 </div>
 </section>
 
-
-
-
-
-
-
-
-
-
-
-
 <br>
-<section id="mission-intro">
-  <h1>Hoverboard is on a mission to help schools transform with the digital revolution</h1><br>
-  <div class="responsive-1to2-columns">
-  <img src="assets/media/mission-image.png" alt="Hoverboard in action, students watching online lesson"><br>
-  <p>Our Platform offers an all-in-one Virtual Learning Environment tailored to the needs of real schools. More than ever, they are in need to function efficiently and effectively to meet the needs of our students. Designed by real classroom teachers, Hoverboard offers meaningful features...</p></div>
+<section id="mission-intro" class="responsive-1to2-columns">
+  <!-- The mission-intro contains a heading, a mission statement, 3 app icons for the features (laptop view only), a main image and a background graphic. The feature is displayed as one column on smaller devices and as a column on larger devices. From Laptop View, the mobile section about features is compressed into a smaller element of this feature-->
+  <img id="bg-squiggle-spring" src="assets/media/bg_squiggles-spring.png" alt="background graphic spring"><br>
+  <h1 id="mission-heading">Hoverboard is on a mission to help schools transform with the digital revolution</h1><br>
+  <img id="mission-image" src="assets/media/mission-image.png"
+    alt="Hoverboard in action, students watching online lesson"><br>
+  <img id="bg-squiggle-flash" src="assets/media/bg-squiggles-flash.png" alt="background graphic flash" ><br>
+  <p id="mission-more-info">Our Platform offers an all-in-one Virtual Learning Environment tailored to the needs of real schools. More than
+    ever, they are in need to function efficiently and effectively to meet the needs of our students. <br><br>Designed by real
+    classroom teachers, Hoverboard offers meaningful features...</p>
+  <!--the following #app-intro-nested is the same feature as #app-intro-parent". The difference is that #app-intro-parent is displayed on mobile view, while #app-intro-nested is displayed on laptop view, compressed into the right column of the #mission-intro feature -->
+  <div id="app-intro-nested" class="features-wrapper hide-in-mobile-and-tablet show-in-laptop-and-desktop" > 
+    <div class="features-heading-container">
+      <p>Features for Teachers</p>
+    </div><br>
+    <div class="app-wrapper">
+      <div class="gallery-app-container">
+        <img src="assets/media/gallery-view.png" alt="Gallery View app icon">
+        <p>Gallery View</p>
+      </div>
+      <div class="peer-feedback-app-container">
+        <img src="assets/media/peer-feedback.png" alt="Peer Feedback app icon">
+        <p>Peer Feedback</p>
+      </div>
+      <div class="deep-assessment-app-container">
+        <img src="assets/media/deep-assessment.png" alt="Deep Assessment app icon">
+        <p>Deep Assessment</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-
-
-
-
-
-
-
-
-
-  <section id="features-intro-homepage">
-
-  <div class="features-wrapper">
+  <section id="app-intro-parent" class="hide-in-laptop-and-desktop">
+  <div class="features-wrapper hide-in-laptop-and-desktop">
     <div class="features-heading-container">
-    <h1>Features for Teachers</h1></div><br>
+    <h2>Features for Teachers</h2></div><br>
     <div class="app-wrapper">
     <div class="gallery-app-container">
     <img src="assets/media/gallery-view.png" alt="Gallery View app icon">
     <p>Gallery View</p></div>
-
     <div class="peer-feedback-app-container">
     <img src="assets/media/peer-feedback.png" alt="Peer Feedback app icon">
     <p>Peer Feedback</p></div>
-
     <div class="deep-assessment-app-container">
     <img src="assets/media/deep-assessment.png" alt="Deep Assessment app icon">
     <p>Deep Assessment</p></div>
@@ -127,207 +112,174 @@
   </div>
   </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section id="testimonials">
-  <h2>What our users say:</h2>
-  <div class="slideshow-container">
-  <div class="testimonial fade">
-    <div class="testimonial-name"><p>Emma Roberts</p></div>
-    <div class="testimonial-title"><p>School Inspector, Education Department</p></div>
-    <img src="assets/media/emma-roberts.png" alt="user image">
-    <div class="testimonial-text"><p>"As a school inspector, I have seen many virtual learning environments, but Hoverboard stands out from the rest. Its quick teacher grading feature allows educators to provide timely feedback, enhancing student learning and progress. I highly endorse Hoverboard as an effective tool for modern education."
-    </p></div>
-  </div>
-  <div class="testimonial fade">
-    <div class="testimonial-name"><p>David Martinez
-      </p></div>
-    <div class="testimonial-title"><p>Headteacher, Maplewood Academy</p></div>
-    <img src="assets/media/david-martinez.png" alt="user image">
-    <div class="testimonial-text"><p>"Hoverboard has significantly reduced our reliance on paper and improved organization within our school. The gallery views feature has made it easier for teachers to access and review student work, promoting efficient assessment. I'm impressed with the positive changes Hoverboard has brought to our institution."
-    </p></div>
-  </div>
-
-  <div class="testimonial fade">
-    <div class="testimonial-name"><p>Robert Thompson
-      </p></div>
-    <div class="testimonial-title"><p>Teacher, Elmwood High School</p></div>
-    <img src="assets/media/robert-thompson.png" alt="user image">
-    <div class="testimonial-text"><p>"Hoverboard has been a game-changer for our school. It has eliminated the hassle of dealing with paper resources and assessments. The quick grading feature has expedited the feedback process, allowing teachers to focus more on teaching. I highly recommend Hoverboard to any school looking for an effective virtual learning environment."
-    </p></div>
-  </div>
-
-  <div class="testimonial fade">
-    <div class="testimonial-name"><p>John Anderson</p></div>
-    <div class="testimonial-title"><p>Principal, Oakwood Elementary</p></div>
-    <img src="assets/media/john-anderson.png" alt="user image">
-    <div class="testimonial-text"><p>"Hoverboard has transformed the way we engage with students and provide feedback. The peer feedback feature has enhanced collaboration and critical thinking in our classrooms. As the Principal of Oakwood Elementary, I am thrilled with the positive impact Hoverboard has had on our school."
-    </p></div>
-  </div></div>
-
-  <div class="testimonial fade">
-    <div class="testimonial-name"><p>Sarah Johnson
-      </p></div>
-    <div class="testimonial-title"><p>Teacher, Lincoln High School</p></div>
-    <img src="assets/media/sarah-johnson.png" alt="user image">
-    <div class="testimonial-text"><p>"Hoverboard has revolutionized the way we handle classwork and assessments. It's made the process more efficient and streamlined, saving us valuable time. As a teacher at Lincoln High School, I highly recommend Hoverboard for its user-friendly interface and comprehensive features."
-    </p></div>
-  </div>
-
-  <div class="testimonial fade">
-    <div class="testimonial-name"><p>Danielle Turner
-      </p></div>
-    <div class="testimonial-title"><p>Headteacher, Sunnydale Primary School</p></div>
-    <img src="assets/media/danielle-turner.png" alt="user image">
-    <div class="testimonial-text"><p>"Hoverboard has exceeded our expectations as a virtual learning environment. The seamless integration of classwork organization and assessment tools has made teaching and learning more effective. As the Headteacher at Sunnydale Primary, I am impressed with the positive impact Hoverboard has had on our school."</p></div>
-  </div>
-
-  <div class="testimonial fade">
-    <div class="testimonial-name"><p>Emily Wilson </p></div>
-    <div class="testimonial-title"><p>Head of Technology, Pinecrest High School</p></div>
-    <img src="assets/media/emily-wilson.png" alt="user image">
-    <div class="testimonial-text"><p>"The transition to a paperless school has been made much easier with Hoverboard. Our teachers can now organize and access resources on the cloud server, reducing time wasted on paperwork. As the Head of Technology at Pinecrest High, I highly recommend Hoverboard for its efficiency and effectiveness."</p></div>
-  </div>
-
-  <div class="testimonial fade">
-    <div class="testimonial-name"><p>Michael Davis
-      </p></div>
-    <div class="testimonial-title"><p>Teacher, Riverside Middle School</p></div>
-    <img src="assets/media/michael-davis.png" alt="user image">
-    <div class="text"><div class="testimonial-text"><p>"Hoverboard has truly transformed the way we handle classwork portfolios. With its peer feedback feature, students can learn from each other and develop their skills collaboratively. As a teacher at Riverside Middle School, I am grateful for the positive impact Hoverboard has had on our students' learning experiences."</p></div>
-  </div><br>
-</div>
-  <div style="text-align:center">
-    <span class="carouselDot"></span> 
-    <span class="carouselDot"></span> 
-    <span class="carouselDot"></span>
-    <span class="carouselDot"></span> 
-    <span class="carouselDot"></span> 
-    <span class="carouselDot"></span> 
-    <span class="carouselDot"></span> 
-    <span class="carouselDot"></span>  
-  </div>
-
-
-  <script>
- let slideIndex = 0;
-showSlides();
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("testimonial");
-  let dots = document.getElementsByClassName("carouselDot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++; 
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-  setTimeout(showSlides, 6000); // Change slide every 6 seconds
-}
-    </script></section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br><br>
-
-<section id="features-link">
-  <br><br>
-  <div class="background-wrapper-black">
-  <div class="features-link-img-wrapper">
-  <img src="assets/media/features-intro.png" alt="Features introduction on mock-up browser window"></div><br>
-  <div class="text-float-right">
-<h2>Curious about our Features?</h2>
+  
+<section id="features-call-to-action" class="display-grid">
+  <div class="background-wrapper background-wrapper-black"></div>
+  <img src="assets/media/features-intro.png" alt="Features introduction on mock-up browser window"><br>
+  <div id="features-h2-p-button" class="text-float-right text-white">
+<h2>Curious about our Features?</h2><br>
 <p>Let us show you our cutting edge technology.</p><br>
-<div class="button"><a href="features.html" >read more here</a></div><br></div></div>
+<div class="button">
+  <a href="features.html">
+    read more here
+  </a>
+</div>
+</div>
+
+</section>
+<br>
+<section>
+  <div class="testimonials-intro">
+    <h2>What our users are saying about</h2><br>
+    <img src="assets/media/navbarlogo.png" alt="inline-logo" id="testimonial-logo-inline">
+  </div>
 </section>
 
+<section id="testimonials-feature" class="display-grid">
+<!--David Martinez-->
+<!--here in this feature the classes have been used to identify the position of the images, graphics and text on the grid. grid group A and B indicate 2 groups of alternating positioning rhythms for laptop view. A line break is used before img class to aid readability-->
+<img src="assets/media/david-martinez.webp" alt="user image" 
+class="user-image david-martinez grid-group-A tablet-image-on-left  tablet-row-1 .laptop-grid-column-1 laptop-row-1-left">
+<p class="testimonial-text david-martinez grid-group-A tablet-image-on-left  tablet-row-1 laptop-row-1-left laptop-grid-column-2">"Hoverboard has significantly reduced our reliance on paper and improved organization within our school. The gallery views feature has made it easier for teachers to access and review student work, promoting efficient assessment. I'm impressed with the positive changes Hoverboard has brought to our institution."</p>
+<h3 class="testimonial-name david-martinez grid-group-A tablet-image-on-left  tablet-row-1 laptop-row-1-left laptop-grid-column-2">David Martinez</h3>
+<h4 class="testimonial-title david-martinez grid-group-A tablet-image-on-left  tablet-row-1 laptop-row-1-left laptop-grid-column-2">Headteacher, Maplewood Academy</h4>
 
+<!--Emily Wilson-->
+<img src="assets/media/emily-wilson.webp" alt="user image" 
+class="user-image emily-wilson grid-group-B tablet-row-2 laptop-row-4-right tablet-image-on-right laptop-grid-column-5">
+<p class="testimonial-text emily-wilson grid-group-B tablet-row-2 laptop-row-4-right tablet-image-on-right laptop-grid-column-4">"The transition to a paperless school has been made much easier with Hoverboard. Our teachers can now organize and access resources on the cloud server, reducing time wasted on paperwork. As the Head of Technology at Pinecrest High, I highly recommend Hoverboard for its efficiency and effectiveness."</p>
+<h3 class="testimonial-name emily-wilson grid-group-B tablet-row-2 laptop-row-4-right tablet-image-on-right laptop-grid-column-4">Emily Wilson</h3>
+<h4 class="testimonial-title emily-wilson grid-group-B tablet-row-2 laptop-row-4-right tablet-image-on-right laptop-grid-column-4">Head of Technology, Pinecrest High School</h4>
 
-<section class="booktrial-link">
-  <div id="booktrial img-container">
-    <img src="assets/media/logo-inverse.png" alt="logo-inverse"> <img src="assets/media/laptop-icon.png" alt="laptop icon"></div>
-  <h2>Try our software for free</h2>
-  <p>Provide an entirely new level of engagement for your students</p><br><br>
-  <div class="button"><a href="booktrial.html" >click here</a></div>
+<!--Michael Davis-->
+<img src="assets/media/michael-davis.webp" alt="user image" 
+class="user-image michael-davis grid-group-B tablet-row-3 laptop-row-4-left tablet-image-on-left laptop-grid-column-2">
+<p class="testimonial-text michael-davis grid-group-B tablet-row-3 laptop-row-4-left tablet-image-on-left  laptop-grid-column-1">"Hoverboard has truly transformed the way we handle classwork portfolios. With its peer feedback feature, students can learn from each other and develop their skills collaboratively. As a teacher at Riverside Middle School, I am grateful for the positive impact Hoverboard has had on our students' learning experiences."</p>
+<h3 class="testimonial-name michael-davis grid-group-B tablet-row-3 laptop-row-4-left tablet-image-on-left  laptop-grid-column-1">Michael Davis</h3>
+<h4 class="testimonial-title michael-davis grid-group-B tablet-row-3 laptop-row-4-left tablet-image-on-left  laptop-grid-column-1">Teacher, Riverside Middle School</h4>
+
+<!--Danielle Turner-->
+  <img src="assets/media/danielle-turner.webp" alt="user image" 
+  class="user-image danielle-turner grid-group-A tablet-row-4 laptop-row-3-left tablet-image-on-right  laptop-grid-column-1">
+<p class="testimonial-text danielle-turner grid-group-A tablet-row-4 laptop-row-3-left tablet-image-on-right laptop-grid-column-2">"Hoverboard has exceeded our expectations as a virtual learning environment. The seamless integration of classwork organization and assessment tools has made teaching and learning more effective. As the Headteacher at Sunnydale Primary, I am impressed with the positive impact Hoverboard has had on our school."</p>
+<h3 class="testimonial-name danielle-turner grid-group-A tablet-row-4 laptop-row-3-left tablet-image-on-right laptop-grid-column-2">Danielle Turner</h3>
+<h4 class="testimonial-title danielle-turner grid-group-A tablet-row-4 laptop-row-3-left tablet-image-on-right laptop-grid-column-2">Headteacher, Sunnydale Primary School</h4>
+
+<!--John Anderson-->
+<img src="assets/media/john-anderson.webp" alt="user image" 
+class="user-image john-anderson grid-group-B tablet-row-5 laptop-row-2-right tablet-image-on-left laptop-grid-column-5">
+<p class="testimonial-text john-anderson grid-group-B tablet-row-5 laptop-row-2-right tablet-image-on-left  laptop-grid-column-4">"Hoverboard has transformed the way we engage with students and provide feedback. The peer feedback feature has enhanced collaboration and critical thinking in our classrooms. As the Principal of Oakwood Elementary, I am thrilled with the positive impact Hoverboard has had on our school."</p>
+<h3 class="testimonial-name john-anderson grid-group-B tablet-row-5 laptop-row-2-right tablet-image-on-left laptop-grid-column-4">John Anderson</h3>
+<h4 class="testimonial-title john-anderson grid-group-B tablet-row-5 laptop-row-2-right tablet-image-on-left laptop-grid-column-4">Principal, Oakwood Elementary</h4>
+
+<!--Emma Roberts-->
+  <img src="assets/media/emma-roberts.webp" alt="user image" 
+  class="user-image emma-roberts grid-group-A tablet-row-6 laptop-row-1-right tablet-image-on-right laptop-grid-column-4">
+<p class="testimonial-text emma-roberts grid-group-A tablet-row-6 laptop-row-1-right tablet-image-on-right laptop-grid-column-5">"As a school inspector, I have seen many virtual learning environments, but Hoverboard stands out from the rest. Its quick teacher grading feature allows educators to provide timely feedback, enhancing student learning and progress. I highly endorse Hoverboard as an effective tool for modern education." </p>
+<h3 class="testimonial-name emma-roberts grid-group-A tablet-row-6 laptop-row-1-right tablet-image-on-right laptop-grid-column-5">Emma Roberts</h3>
+<h4 class="testimonial-title emma-roberts grid-group-A tablet-row-6 laptop-row-1-right tablet-image-on-right laptop-grid-column-5">School Inspector, Education Department</h4>
+
+<!--Robert Thompson-->
+<img src="assets/media/robert-thompson.webp" alt="user image" 
+  class="user-image robert-thompson grid-group-A tablet-row-7 laptop-row-3-right tablet-image-on-left laptop-grid-column-4">
+<p class="testimonial-text robert-thompson grid-group-A tablet-row-7 laptop-row-3-right tablet-image-on-left laptop-grid-column-5">"Hoverboard has been a game-changer for our school. It has eliminated the hassle of dealing with paper resources and assessments. The quick grading feature has expedited the feedback process, allowing teachers to focus more on teaching. I highly recommend Hoverboard to any school looking for an effective virtual learning environment."</p>
+<h3 class="testimonial-name robert-thompson grid-group-A tablet-row-7 laptop-row-3-right tablet-image-on-left laptop-grid-column-5">Robert Thompson</h3>
+<h4 class="testimonial-title robert-thompson grid-group-A tablet-row-7 laptop-row-3-right tablet-image-on-left laptop-grid-column-5">Teacher, Elmwood High School</h4>
+
+<!--Sarah Johnson-->
+<img src="assets/media/sarah-johnson.webp" alt="user image"
+class="user-image sarah-johnson grid-group-B tablet-row-8 laptop-row-2-left tablet-image-on-right laptop-grid-column-2">
+<p class="testimonial-text sarah-johnson grid-group-B tablet-row-8 laptop-row-2-left tablet-image-on-right laptop-grid-column-1">"Hoverboard has revolutionized the way we handle classwork and assessments. It's made the process more efficient and streamlined, saving us valuable time. As a teacher at Lincoln High School, I highly recommend Hoverboard for its user-friendly interface and comprehensive features."</p>
+<h3 class="testimonial-name sarah-johnson grid-group-B tablet-row-8 laptop-row-2-left tablet-image-on-right laptop-grid-column-1">Sarah Johnson</h3>
+<h4 class="testimonial-title sarah-johnson grid-group-B tablet-row-8 laptop-row-2-left tablet-image-on-right laptop-grid-column-1">Teacher, Lincoln High School</h4>
+
+<!--blue and orange background, placed here as they are relocated on the grid-->
+<div class="testimonial-background testimonial-background-blue tablet-row-1 laptop-row-1-right emma-roberts grid-group-A laptop-grid-column-4-span-2"> </div>
+<div class="testimonial-background testimonial-background-blue tablet-row-3 laptop-row-3-right robert-thompson grid-group-A laptop-grid-column-4-span-2"> </div>
+<div class="testimonial-background testimonial-background-blue tablet-row-5 laptop-row-2-left sarah-johnson grid-group-B laptop-grid-column-1-span-2"> </div>
+<div class="testimonial-background testimonial-background-blue tablet-row-7 laptop-row-4-left michael-davis grid-group-B laptop-grid-column-1-span-2"> </div>
+<div class="testimonial-background testimonial-background-orange tablet-row-2 laptop-row-1-left david-martinez grid-group-A laptop-grid-column-1-span-2"> </div>
+<div class="testimonial-background testimonial-background-orange tablet-row-4 laptop-row-3-left danielle-turner grid-group-A laptop-grid-column-1-span-2"> </div>
+<div class="testimonial-background testimonial-background-orange tablet-row-6 laptop-row-2-right john-anderson grid-group-B laptop-grid-column-4-span-2"> </div>
+<div class="testimonial-background testimonial-background-orange tablet-row-8 laptop-row-4-right emily-wilson grid-group-B laptop-grid-column-4-span-2"> </div>
+
+<!--airquotations-->
+<!--placed at the end because it was easier to place them, they would be in different areas-->
+<img src="assets/media/airquote-left.png" alt="air quotations opening" 
+class="air-quotations air-quotations-opening tablet-row-1 laptop-row-1-left .david-martinez grid-group-A laptop-grid-column-1-span-2">
+<img src="assets/media/airquote-left.png" alt="air quotations opening" 
+class="air-quotations air-quotations-opening tablet-row-3 laptop-row-1-right emma-roberts grid-group-A laptop-grid-column-4-span-2">
+<img src="assets/media/airquote-left.png" alt="air quotations opening" 
+class="air-quotations air-quotations-opening tablet-row-5 laptop-row-3-left danielle-turner grid-group-A laptop-grid-column-1-span-2 ">
+<img src="assets/media/airquote-left.png" alt="air quotations opening" 
+class="air-quotations air-quotations-opening tablet-row-7 laptop-row-3-right robert-thompson grid-group-A laptop-grid-column-4-span-2">
+<img src="assets/media/airquote-right.png" alt="air quotations closing" 
+class="air-quotations air-quotations-closing tablet-row-2 laptop-row-2-left sarah-johnson grid-group-B laptop-grid-column-1-span-2">
+<img src="assets/media/airquote-right.png" alt="air quotations closing" 
+class="air-quotations air-quotations-closing tablet-row-4 laptop-row-2-right john-anderson grid-group-B laptop-grid-column-4-span-2">
+<img src="assets/media/airquote-right.png" alt="air quotations closing" 
+class="air-quotations air-quotations-closing tablet-row-6 laptop-row-4-left michael-davis grid-group-B laptop-grid-column-1-span-2">
+<img src="assets/media/airquote-right.png" alt="air quotations closing" 
+class="air-quotations air-quotations-closing tablet-row-8 laptop-row-4-right emily-wilson grid-group-B laptop-grid-column-4-span-2">
+
+</section>
 <br><br>
+
+<section class="booktrial-link display-grid">
+  <div class="background-wrapper background-wrapper-orange"></div>
+  <img src="assets/media/signup-browser-image.png" alt="sign up image of browser icon">
+  <h2 class="text-black-medium">Try our software for free</h2>
+  <p>Provide an entirely new level of engagement for your students</p><br>
+  <div class="button"><a href="booktrial.html">click here</a></div><br> <!--links to sign up page--> 
 </section>
 </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
   <footer>
-
+    <!-- The footer contains a copyright note and links to the company's social media pages. The links are displayed as 2 columns on smaller devices and as a single row on larger devices. -->
     <div class="footer-small-print">
       <p>
-      © 2023 Hoverboard
+        © 2023 Hoverboard
       </p>
     </div>
-    
-
     <div class = "footer-links">
-
-      <div class = "footer-row1">
-        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://www.intagram.com/"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.twitter.com/">
-        <i class="fa-brands fa-twitter"></i></a>
-        <a href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
-      </div>
-
-      <div class = "footer-row2">
-        <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
-        <a href="https://www.discord.com/"><i class="fa-brands fa-discord"></i></a>
-        <a href="https://www.slack.com/"><i class="fa-brands fa-slack"></i></a>
-        <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
-      </div>
-      
+        <div class="footer-row1">
+          <a href="https://www.facebook.com/"><img src="assets/media/icons/facebook.svg" alt="icon"></a>
+          <a href="https://www.instagram.com/"><img src="assets/media/icons/instagram.svg" alt="icon"></a>
+          <a href="https://www.github.com/"><img src="assets/media/icons/github.svg" alt="icon"></a>
+          <a href="https://www.tiktok.com/"><img src="assets/media/icons/tiktok.svg" alt="icon"></a>
+        </div>
+        <div class="footer-row2">
+          <a href="https://www.youtube.com/"><img src="assets/media/icons/youtube.svg" alt="icon"></a>
+          <a href="https://www.discord.com/"><img src="assets/media/icons/discord.svg" alt="icon"></a>
+          <a href="https://www.slack.com/"><img src="assets/media/icons/slack.svg" alt="icon"></a>
+          <a href="https://www.linkedin.com/"><img src="assets/media/icons/linkedin.svg" alt="icon"></a>
+        </div>
     </div>  
-
   </footer>
+  </div>
+  <script> 
+    /*Script for Menu open */
+      function myFunction() {
+        document.getElementById("mynavbar").classList.toggle("menuOpen");
+        document.querySelector("main").classList.toggle("move-down");
+      }
+    
+     /*Script for Read More/Read Less button */
+      function readMoreReadLessFunction() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn");
+      
+        if (dots.style.display === "none") {
+          dots.style.display = "inline";
+          btnText.innerHTML = "Read more"; 
+          moreText.style.display = "none";
+        } else {
+          dots.style.display = "none";
+          btnText.innerHTML = "Read less"; 
+          moreText.style.display = "inline";
+        }
+      }
+    
+    </script>
 </body>
-

@@ -6,61 +6,47 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Hoverboard, the online Education platform">
-  <meta name="keywords" content="Hoverboard, Classroom, VLE,">
+  <meta name="keywords" content="Hoverboard, Classroom, VLE, Education, Learning, Homework, School, Teacher, Student, Virtual Learning Environment, Online Learning, Online Classroom, Online Education, Online Teacher, Online Student, Online Homework, Online School, Homework Plaform, Learning Platform, Homework Cloud, Complete classwork online"> 
   <link rel="stylesheet" href="assets/css/style.css">
-  <link href="https://fonts.cdnfonts.com/css/glacial-indifference-2" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/peace-sans" rel="stylesheet">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script src="https://kit.fontawesome.com/c7515a9d31.js" crossorigin="anonymous"></script>
-
   <link rel="icon" href="assets/media/favicon.ico" type="image/x-icon">
   <title>Hoverboard</title>
 </head>
 
 <body>
   <header>
+    <!-- The header contains a responsive Navbar that is displayed on all pages. The Navbar contains the logo, a menu icon and menu items. The menu icon is only displayed on mobile devices, it is used to open and close the menu items on mobile devices.  The menu items are displayed as a list on mobile devices and as a row on larger devices. -->
     <nav>
       <div class="navbar" id="mynavbar">
         <a href="index.html"><img src="assets/media/navbarlogo.png" class="navbartitle" alt="Hoverboard Company Logo"></a>
-
         <a href="javascript:void(0)" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars" id="icon-open"></i></a>
-
-        <a href="javascript:void(0)" class="icon" onclick="myFunction()">
-        <i class="fa-solid fa-x"  id="icon-close"></i></a>
-
+        <i class="fa fa-bars" id="icon-open"></i></a> <!--Menu-open icon only displayed on mobile devices --->
+        <a href="javascript:void(0)" class="icon" onclick="myFunction()"> 
+        <i class="fa-solid fa-x"  id="icon-close"></i></a> <!-- closes the menu-->
       <ul class="menu-items">
+      <li><a href="index.html">Home</a></li>
       <li><a href="features.html">About our Features</a></li>
-      <li><a href="booktrial.html" class="tab-active">Book Free Trial</a></li>
+      <li><a href="booktrial.html" class="tab-active">Sign up</a></li>
       </ul>
 
     </div>
     </nav>
-    <script> /*Script for Menu open */
-      function myFunction() {
-        document.getElementById("mynavbar").classList.toggle("menuOpen");
-        document.querySelector("main").classList.toggle("move-down");
-      }
-  </script>
+
   </header>
-
+<br>
   <main>
-    <section class="booktrial-landing">
-        <div class="booktrial-h1-container">
-            <h1>
-              Thank you, your form has been submitted
-            </h1>
-            <br>
-            <div class="button"><p href="index.html" >Back to homepage</p></div>
-          </div>
-            <div class="img-container">
-            <img src="/assets/media/booktrial-clipboard-icon.png" alt="signup icon">
-        </div>
+    <section id="booktrial-landing" class="display-grid">
+      <div class="heading-container">
+      </div>
+      <h1 class="text-white">
+        Your Form has been submitted
+      </h1>
+      <img src="assets/media/booktrial-clipboard-icon.png" alt="signup icon">
     </section>
-  </main>
 
+    <p>a member of our team will be in contact with you shortly</p>
   <footer>
 
     <div class="footer-small-print">
@@ -74,7 +60,7 @@
 
       <div class = "footer-row1">
         <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://www.intagram.com/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
         <a href="https://www.twitter.com/">
         <i class="fa-brands fa-twitter"></i></a>
         <a href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
@@ -92,3 +78,9 @@
   </footer>
 </body>
 
+<script> /*Script for Menu open */
+  function myFunction() {
+    document.getElementById("mynavbar").classList.toggle("menuOpen");
+    document.querySelector("main").classList.toggle("move-down");
+  }
+</script>

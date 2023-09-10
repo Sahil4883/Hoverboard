@@ -6,98 +6,55 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Hoverboard, the online Education platform">
-  <meta name="keywords" content="Hoverboard, Classroom, VLE,">
+  <meta name="keywords" content="Hoverboard, Classroom, VLE, Education, Learning, Homework, School, Teacher, Student, Virtual Learning Environment, Online Learning, Online Classroom, Online Education, Online Teacher, Online Student, Online Homework, Online School, Homework Plaform, Learning Platform, Homework Cloud, Complete classwork online"> 
   <link rel="stylesheet" href="assets/css/style.css">
-  <link href="https://fonts.cdnfonts.com/css/glacial-indifference-2" rel="stylesheet">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script src="https://kit.fontawesome.com/c7515a9d31.js" crossorigin="anonymous"></script>
-
   <link rel="icon" href="assets/media/favicon.ico" type="image/x-icon">
   <title>Hoverboard</title>
 </head>
 
 <body id="features-page">
+  <div class="container-fixed-footer"><!---This div is used to fix the footer to the bottom of the page.-->
+    <div class="body-content-wrap-for-fixed-footer"><!---This div is used to fix the footer to the bottom of the page.-->
   <header>
     <nav>
       <div class="navbar" id="mynavbar">
-        <a href="index.html"><img src="assets/media/navbarlogo.png" class="navbartitle" alt="Hoverboard Company Logo"></a>
-
-        <a href="javascript:void(0)" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars" id="icon-open"></i></a>
-
-        <a href="javascript:void(0)" class="icon" onclick="myFunction()">
+        <a href="index.html"><img src="assets/media/navbarlogo-smallest.png" class="navbartitle" alt="Hoverboard Company Logo"></a>
+        <a href="javascript:void(0)" class="icon" onclick="myFunction()" aria-label="open mobile menu">
+        <i class="fa fa-bars" id="icon-open"></i></a> <!--Menu-open icon only displayed on mobile devices -->
+        <a href="javascript:void(0)" class="icon" onclick="myFunction()" aria-label="close mobile menu"> 
         <i class="fa-solid fa-x"  id="icon-close"></i></a>
-
       <ul class="menu-items">
-      <li><a href="features.html">About our Features</a></li>
-      <li><a href="booktrial.html" class="tab-active">Book Free Trial</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="features.html" class="tab-active">About our Features</a></li>
+      <li><a href="booktrial.html">Sign up</a></li>
       </ul>
 
     </div>
     </nav>
-    <script> /*Script for Menu open */
-      function myFunction() {
-        document.getElementById("mynavbar").classList.toggle("menuOpen");
-        document.querySelector("main").classList.toggle("move-down");
-      }
-  </script>
+
   </header>
   <br><br><br><br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <main>
   <section class="features-landing">
-
   <div class="features-wrapper">
     <div class="features-heading-container">
-    <h1>Features for Teachers</h1></div><br>
+    <h1 class="text-white">Features for Teachers</h1></div><br>
     <div class="app-wrapper">
     <div class="gallery-app-container">
     <img src="assets/media/gallery-view.png" alt="Gallery View app icon">
     <p>Gallery View</p></div>
-
     <div class="peer-feedback-app-container">
     <img src="assets/media/peer-feedback.png" alt="Peer Feedback app icon">
     <p>Peer Feedback</p></div>
-
     <div class="deep-assessment-app-container">
     <img src="assets/media/deep-assessment.png" alt="Deep Assessment app icon">
     <p>Deep Assessment</p></div>
   </div>
   </div>
-
-  </div>
   </section>
-
-
-
-
-
-
-
-
-
-
 
   <section class="main-body">
     <br><br>
@@ -111,7 +68,7 @@
     <h2>Write engaging, personalised prompts for Peer Feedback</h2><br>
 
     <div class="img-text-wrapper-reverse">
-    <img src="/assets/media/browser-peer-feedback.png" alt="Peer Feedback browser view"><br>
+    <img src="assets/media/browser-peer-feedback.png" alt="Peer Feedback browser view"><br>
     <p>Unlock the power of peer feedback with our dynamic prompt generator. Gone are the days of generic, uninspiring questions that yield limited insights. With our platform, you can effortlessly craft engaging and personalized prompts that encourage meaningful and constructive peer feedback. Empower students to take an active role in their own learning journey by sparking thought-provoking discussions and promoting critical thinking skills. By tailoring prompts to individual students, you'll inspire deeper engagement and foster a supportive learning community where everyone's voice is heard.</p></div>
 
 
@@ -119,81 +76,50 @@
     <h2>Adapt to the trends with Deep Assessment</h2><br>
 
     <div class="img-text-wrapper">
-    <img src="/assets/media/browser-deep-assessment.png" alt="Deep Assessment browser view"><br>
+    <img src="assets/media/browser-deep-assessment.png" alt="Deep Assessment browser view"><br>
     <p>Stay ahead of the curve and adapt to your student's learning with our cutting-edge Deep Assessment feature. Powered by AI, our software offers a comprehensive analysis of student performance, going beyond traditional methods. By analyzing students' self-reflections, peer feedback, and mock exams, our advanced algorithms provide a holistic understanding of each student's progress, strengths, and areas for improvement. With this wealth of data, you can make informed decisions and tailor your teaching approach to meet the unique needs of every student. Uncover hidden patterns, identify knowledge gaps, and provide targeted support, empowering your students to reach their full potential.</p></div>
   </div>
   </section>
   <br><br>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <section class="booktrial-link"><br><br>
-    <img src="assets/media/logo-inverse.png" alt="Logo Inverse colors"><br>
-    <h2>Try Hoverboard for free</h2>
-    <br><br>
-    <div class="button"><a href="booktrial.html" >click here</a></div>
-
-    <br><br> <br><br>
+  <section class="booktrial-link display-grid">
+    <div class="background-wrapper background-wrapper-orange"></div>
+    <img src="assets/media/signup-browser-image.png" alt="sign up image of browser icon">
+    <h2 class="text-black-medium">Try our software for free</h2>
+    <p>Provide an entirely new level of engagement for your students</p><br>
+    <div class="button"><a href="booktrial.html">click here</a></div><br>
   </section>
 </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
   <br><br>
   <footer>
-    <br><br> <br><br>
+    <!-- The footer contains a copyright note and links to the company's social media pages. The links are displayed as 2 columns on smaller devices and as a single row on larger devices. -->
     <div class="footer-small-print">
-      <p>
-      © 2023 Hoverboard
-      </p>
+      <h5>
+        © 2023 Hoverboard
+      </h5>
     </div>
-    
-
-    <div class = "footer-links">
-
-      <div class = "footer-row1">
-        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://www.intagram.com/"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.twitter.com/">
-        <i class="fa-brands fa-twitter"></i></a>
-        <a href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
+    <div class="footer-links">
+      <div class="footer-row1">
+        <a href="https://www.facebook.com/"><img src="assets/media/icons/facebook.svg" alt="icon"></a>
+        <a href="https://www.instagram.com/"><img src="assets/media/icons/instagram.svg" alt="icon"></a>
+        <a href="https://www.github.com/"><img src="assets/media/icons/github.svg" alt="icon"></a>
+        <a href="https://www.tiktok.com/"><img src="assets/media/icons/tiktok.svg" alt="icon"></a>
       </div>
-
-      <div class = "footer-row2">
-        <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
-        <a href="https://www.discord.com/"><i class="fa-brands fa-discord"></i></a>
-        <a href="https://www.slack.com/"><i class="fa-brands fa-slack"></i></a>
-        <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+      <div class="footer-row2">
+        <a href="https://www.youtube.com/"><img src="assets/media/icons/youtube.svg" alt="icon"></a>
+        <a href="https://www.discord.com/"><img src="assets/media/icons/discord.svg" alt="icon"></a>
+        <a href="https://www.slack.com/"><img src="assets/media/icons/slack.svg" alt="icon"></a>
+        <a href="https://www.linkedin.com/"><img src="assets/media/icons/linkedin.svg" alt="icon"></a>
       </div>
-    </div>  
-
+      </div>
   </footer>
+  </div>
+  <script> /*Script for Menu open */
+    function myFunction() {
+      document.getElementById("mynavbar").classList.toggle("menuOpen");
+      document.querySelector("main").classList.toggle("move-down");
+    }
+  </script>
 </body>
 
